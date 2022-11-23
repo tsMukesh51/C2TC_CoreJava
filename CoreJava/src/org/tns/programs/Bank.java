@@ -1,4 +1,4 @@
-package org.tns.test2;
+package org.tns.programs;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -38,16 +38,23 @@ class Account {
 	}
 
 	long getAccNum() {
-	      Random rand = new Random();
-	      long num = rand.nextInt(100001, 999999);
+		int[] acNum = new int[100];
+		outer:
+		while(true) {
+	      long num = (long)((Math.random() * 899999) + 100000);
+	      for(int i = 0; i < acNum.length; i++) {
+	    	  if(acNum[i] == num) {
+	    		  continue outer;
+	    	  }
+	      }
 	      return num;
+		}
 	}
 }
 
 public class Bank {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("Namaste, Welcome to Banking");
 		Scanner sc = new Scanner(System.in);
 		int obNum = 0;
@@ -68,7 +75,7 @@ public class Bank {
 				for(int i = 0; i < obNum; i++) {
 					if(accNum == acc[i].accNum) {
 						loginId = i;
-						System.out.println("Done" + loginId);
+						System.out.println("Login Successful");
 						break;
 					}
 				}

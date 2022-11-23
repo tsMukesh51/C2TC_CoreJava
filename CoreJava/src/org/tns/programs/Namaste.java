@@ -1,4 +1,4 @@
-package org.tns.program;
+package org.tns.programs;
 
 public class Namaste {
 
