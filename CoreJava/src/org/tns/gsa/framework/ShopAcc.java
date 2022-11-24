@@ -1,11 +1,11 @@
-package org.tns.gsa;
+package org.tns.gsa.framework;
 
 public abstract class ShopAcc {
 	private int accNo;
 	private String accNm;
 	private float charges;
-	ShopAcc(int AccNo, String accNm,float charges){
-		accNo = AccNo;
+	ShopAcc(int accNo, String accNm,float charges){
+		this.accNo = accNo;
 		this.accNm = accNm;
 		this.charges = charges;
 	}
@@ -15,13 +15,13 @@ public abstract class ShopAcc {
 	public int getAccNo() {
 		return accNo;
 	}
-	public String getaccNm() {
+	public String getAccNm() {
 		return accNm;
 	}
 	public void setAccNm(String accNm) {
 		this.accNm = accNm;
 	}
-	public float getcharges() {
+	public float getCharges() {
 		return charges;
 	}
 }

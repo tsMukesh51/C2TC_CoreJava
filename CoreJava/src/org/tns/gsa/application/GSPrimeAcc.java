@@ -1,7 +1,9 @@
-package org.tns.gsa;
+package org.tns.gsa.application;
+
+import org.tns.gsa.framework.PrimeAcc;
 
 public class GSPrimeAcc extends PrimeAcc{
-	private final float Charges = 0;
+//	private final float Charges = 0;
 	public GSPrimeAcc(int AccNo, String accNm,float charges, boolean isPrime){
 		super(AccNo, accNm, charges, isPrime);
 	}
@@ -11,11 +13,14 @@ public class GSPrimeAcc extends PrimeAcc{
 	}
 	@Override
 	public String toString() {
-		return ("Name: " + super.getaccNm() + "\nAccount Number" + super.getAccNo() + "Total Charges" + (super.getDeliveryCharges() + super.getcharges()));
+		return ("Name: " + super.getAccNm() + "\nAccount Number" + super.getAccNo() + "Total Charges" + (super.getDeliveryCharges() + super.getCharges()));
 	}
 	@Override
 	public void items(float item) {
 		System.out.println("Items are brought");
 	}
 	
+//	public float getCharges() {
+//		return Charges;
+//	}
 }

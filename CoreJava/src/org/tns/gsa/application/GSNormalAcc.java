@@ -1,4 +1,6 @@
-package org.tns.gsa;
+package org.tns.gsa.application;
+
+import org.tns.gsa.framework.NormalAcc;
 
 public class GSNormalAcc extends NormalAcc{
 	public GSNormalAcc(int AccNo, String accNm, float charges, float deliveryCharges){
@@ -8,7 +10,7 @@ public class GSNormalAcc extends NormalAcc{
 		System.out.println("Your total payable amount is: "+ charges);
 	}
 	public String toString() {
-		return ("Name: " + super.getaccNm() + "\nAccount Number" + super.getAccNo() + "Total Charges" + (super.getDeliveryCharges() + super.getcharges()));
+		return ("Name: " + super.getAccNm() + "\nAccount Number" + super.getAccNo() + "Total Charges" + (super.getDeliveryCharges() + super.getCharges()));
 		}
 	@Override
 	public void items(float item) {
